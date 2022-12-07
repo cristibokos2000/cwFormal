@@ -11,13 +11,14 @@ public class Mod3TableFilter {
         throws IOException {
 
     Mod3Table m = new Mod3Table(); // DFA
-    File file = new File("numbers.txt");
+    File file = new File("/workspaces/cwFormal/cw/numbers.txt");
     BufferedReader in =  // Standard input
       new BufferedReader(new FileReader(file));
 
     // Read and echo lines until EOF
 
     String s = in.readLine();
+    System.out.println("Accepted words:");
     while (s!=null) {
       m.reset();
       m.process(s);
